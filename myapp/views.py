@@ -9,7 +9,7 @@ from datetime import date, time
 def home(request):
     return render(request,"home.html")
 
-sales_data = Sales(
+'''sales_data = Sales(
     orderDate=date(2024, 5, 1),
     totalOrders=3000,
     completedOrders=2500,
@@ -19,6 +19,8 @@ sales_data = Sales(
 )
 sales_data.save()
 
-
+sales = Sales.objects.all()
+for sale in sales:
+    print(sale)'''
 
 
