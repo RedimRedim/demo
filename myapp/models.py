@@ -19,4 +19,10 @@ class Sales(models.Model):
         return f"Sales data for {self.orderDate}"
     
     
+    
 
+'''order_data = [
+    {'orderDate': '2024-05-01', 'totalOrders': 3000, 'completedOrders': 2500, 'totalAmount': 1325828, 'ratio': '83%', 'completedTime': '00:01:15'},
+    {'orderDate': '2024-05-02', 'totalOrders': 3500, 'completedOrders': 2800, 'totalAmount': 1459823, 'ratio': '80%', 'completedTime': '00:01:20'},
+    {'orderDate': '2024-05-03', 'totalOrders': 4000, 'completedOrders': 3500, 'totalAmount': 1675893, 'ratio': '87.5%', 'completedTime': '00:01:10'},
+]'''
