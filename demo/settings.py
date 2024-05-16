@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles", #CSS stylesheet 
     "myapp", #everytime create app, need to register in the installed_apps
+    "accounts", #app for user aucthentic
 ]
 
 MIDDLEWARE = [
