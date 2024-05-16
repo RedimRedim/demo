@@ -1,0 +1,10 @@
+<aside style="min-height: 80vh" class="col-lg-3 p-2 bg-dark-purple text-white">
+  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a class="nav-link {% if request.path == '/' %}active{% endif %} text-white" id="v-pills-home-tab"
+      data-toggle="pill" href="{% url 'home' %}" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+    <a class="nav-link {% if request.path == '/chart/' %}active{% endif %} text-white" id="v-pills-profile-tab"
+      data-toggle="pill" href="" role="tab" aria-controls="v-pills-profile" aria-selected="false">Chart</a>
+    <a class="nav-link {% if request.path == '/test/' %}active{% endif %} text-white" id="v-pills-messages-tab"
+      data-toggle="pill" href="" role="tab" aria-controls="v-pills-messages" aria-selected="false">Test</a>
+  </div>
+</aside>

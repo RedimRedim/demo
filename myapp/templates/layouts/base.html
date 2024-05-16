@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    {% endblock %}
+
+    {% block stylesheet %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="container-fluid" style="height: 100vh; padding:10px;">
+        <div class="row">
+            <div class="col-lg-1.5 col-md-1.5 p-2 bg-dark">
+                {% include 'layouts/sidebar.html' %}
+            </div>
+            {% block content %} {% endblock %}
+        </div>
+    </div>
+</body>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% block scripts %} {% endblock %}
+
+</html>
