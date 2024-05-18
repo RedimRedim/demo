@@ -1,75 +1,60 @@
 {% extends "layouts/base.html" %}
-
-{% block stylesheet %}
+<!-- load static in order to link/ load CSS files -->
+{% load static %} {% block stylesheet %}
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Link to the chart2.css file -->
+<link rel="stylesheet" href="{% static 'css/chart2.css' %}" />
+
 <style>
     * {
         margin: 0;
         padding: 0;
         font-family: sans-serif;
     }
-
-    .chartMenu {
-        width: 50%;
-        height: 100%;
-        background: #1a1a1a;
-        color: rgba(54, 162, 235, 1);
-    }
-
-    .chartMenu p {
-        padding: 10px;
-        font-size: 20px;
-    }
-
-    .chartCard {
-        height: calc(100vh - 40px);
-        /* Subtract the navbar height from the viewport height */
-        background: rgba(54, 162, 235, 0.2);
-        padding-left: 5px;
-        display: flex;
-        align-items: left;
-        justify-content: left;
-    }
-
-    .chartBox {
-        padding: 20px;
-        border-radius: 20px;
-        border: solid 3px rgba(54, 162, 235, 1);
-        background: lightgray;
-        width: 100%;
-    }
-
-    .chartContainer {
-        width: 100%;
-        height: 100%;
-        overflow-x: scroll;
-    }
-
-    .containerBody {
-        height: calc(100% - 20px);
-    }
 </style>
-{% endblock %}
-
-
-{% block content %}
-<div class="col-lg-6 col-md-6">
-    <div class=" chartCard">
-        <div class="chartBox">
-            <div class="chartContainer">
-                <div class="containerBody">
-                    <canvas id="myChart"></canvas>
+{% endblock %} {% block content %}
+<div class="col-lg-6 col-md-6 mainContainer">
+    <div class="row" style="height: 50%;">
+        <div class="col-12">
+            <div class="chartCard">
+                <div class="chartBox">
+                    <div class="chartContainer">
+                        <div class="containerBody" id=containerBody1>
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="height: 50%;">
+        <div class="col-12">
+            <div class="chartCard">
+                <div class="chartBox">
+                    <div class="chartContainer">
+                        <div class="containerBody" id="containerBody2">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="col" style="border: 5px solid blue; box-sizing: border-box;">
+
+
+<div class="col" style="border: 5px solid blue; box-sizing: border-box">
     <p>3rd container</p>
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script>
+    var orderDate = {{ orderDate| safe}};
+    var ratio = {{ ratio| safe}};
+    var completedOrders = {{ completedOrders| safe}};
+</script>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
 <script src="static/js/chart2.js"></script>
 {% endblock %}

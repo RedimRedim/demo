@@ -1,0 +1,39 @@
+.chartMenu {
+  width: 50%;
+  height: 100%;
+  background: #1a1a1a;
+  color: rgba(54, 162, 235, 1);
+}
+
+.chartMenu p {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.chartCard {
+  height: 100%;
+
+  background: rgba(54, 162, 235, 0.2);
+  padding-left: 5px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.chartBox {
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 3px rgba(54, 162, 235, 1);
+  background: lightgray;
+  width: 100%;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+.containerBody {
+  height: 100%;
+}

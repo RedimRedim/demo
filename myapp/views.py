@@ -1,17 +1,14 @@
 from django.shortcuts import render,HttpResponse
-from .models import todoitem
-from myapp.models import Sales
+from .models import todoitem, Sales
 from datetime import date, time
 import  matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-
-# request handler request -> response is being called views.py in Django
-# Create your views here.
-
+from .testfunction import all_sales_data
 
 def home(request):
-    return render(request,"home.html")
+    context = all_sales_data()
+    return render(request,"home.html", context)
 
 def generate_chart():
     # Get data from database
